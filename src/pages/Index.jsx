@@ -4,7 +4,7 @@ import WelcomePage from "@/components/WelcomePage.jsx";
 import { motion as Motion, AnimatePresence } from "motion/react";
 import LeftContent from "@/components/LeftContent";
 import MainPage from "./MainPage";
-import musicSrc from "@/assets/music/ary-kencana-seribu-bidadari.mp3";
+import musicSrc from "@/assets/music/suling.mp3";
 
 const Index = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(true); // Set true untuk producion
@@ -76,10 +76,10 @@ const Index = () => {
           animate={
             isDesktop
               ? {
-                  opacity: isWelcomeVisible ? 0 : 1,
-                  y: isWelcomeVisible ? 100 : 0,
-                  x: isWelcomeVisible ? 100 : 0,
-                }
+                opacity: isWelcomeVisible ? 0 : 1,
+                y: isWelcomeVisible ? 100 : 0,
+                x: isWelcomeVisible ? 100 : 0,
+              }
               : { opacity: isWelcomeVisible ? 0 : 1 }
           }
           transition={

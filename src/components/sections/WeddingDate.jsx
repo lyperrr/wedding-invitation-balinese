@@ -105,7 +105,7 @@ const WeddingDate = () => {
                         {weddingData.event.time}
                       </Typography>
                       <Typography className="inline-flex items-center gap-2 mt-0! text-sm! leading-4">
-                        <MapPin size={16} />
+                        <MapPin size={16} className="shrink-0"/>
                         {weddingData.event.location}
                       </Typography>
                       <Button

@@ -81,7 +81,7 @@ const Couple = () => {
                             src={couple.photo}
                             alt={couple.call_name}
                             loading="lazy"
-                            className="size-70 rounded-full object-cover shadow-lg"
+                            className="size-70 object-cover shadow-lg"
                           />
                         </ScaleIn>
                       </div>

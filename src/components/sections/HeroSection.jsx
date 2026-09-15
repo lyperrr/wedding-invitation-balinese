@@ -1,11 +1,11 @@
 /** @format */
 import { useState, useEffect } from "react";
 import { motion as Motion, AnimatePresence } from "motion/react";
-import gallery1 from "@/assets/image/gallery/gallery(1).jpg";
-import gallery2 from "@/assets/image/gallery/gallery(2).jpg";
-import gallery3 from "@/assets/image/gallery/gallery(3).jpg";
-import gallery4 from "@/assets/image/gallery/gallery(4).jpg";
-import gallery5 from "@/assets/image/gallery/gallery(5).jpg";
+import gallery1 from "@/assets/image/gallery/gallery(22).jpg";
+import gallery2 from "@/assets/image/gallery/gallery(6).jpg";
+import gallery3 from "@/assets/image/gallery/gallery(47).jpg";
+import gallery4 from "@/assets/image/gallery/gallery(17).jpg";
+import gallery5 from "@/assets/image/gallery/gallery(16).jpg";
 import Typography from "../ui/typography";
 import WaveShape1 from "../shapes/WaveShape1";
 

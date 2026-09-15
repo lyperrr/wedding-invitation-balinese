@@ -16,8 +16,8 @@ const HeroSection = () => {
 
   const Data = {
     title: "The Wedding of",
-    name: "Agus & Mang ari",
-    date: "Rabu, 25 Maret 2026",
+    name: "Dwiyana & Yuningsih",
+    date: "Rabu, 1 Oktober 2026",
   };
 
   useEffect(() => {
@@ -75,11 +75,10 @@ const HeroSection = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`h-2 rounded-full transition-all duration-700 ease-in-out ${
-                index === currentIndex
-                  ? "bg-secondary w-8 scale-110"
-                  : "bg-secondary/30 w-2 hover:bg-secondary/50 hover:scale-110"
-              }`}
+              className={`h-2 rounded-full transition-all duration-700 ease-in-out ${index === currentIndex
+                ? "bg-secondary w-8 scale-110"
+                : "bg-secondary/30 w-2 hover:bg-secondary/50 hover:scale-110"
+                }`}
               aria-label={`Go to image ${index + 1}`}
             />
           ))}

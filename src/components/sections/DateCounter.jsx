@@ -4,7 +4,32 @@ import Typography from "../ui/typography";
 import { ScrollReveal, ScaleIn } from "../../lib/animations";
 
 const DateCounter = () => {
-  const weddingDate = new Date("2026-03-25T17:00:00+08:00");
+  // ============================================================
+  // TANGGAL & WAKTU ACARA
+  // ============================================================
+  // Format:
+  // YYYY-MM-DDTHH:mm:ss+08:00
+  //
+  // YYYY = Tahun
+  // MM   = Bulan (01 = Januari, 10 = Oktober)
+  // DD   = Tanggal
+  // HH   = Jam (format 24 jam)
+  // mm   = Menit
+  // ss   = Detik
+  //
+  // +08:00 = Zona waktu WITA (UTC+8)
+  //
+  // CONTOH:
+  // 2026-10-01T17:00:00+08:00
+  //             │  │  │
+  //             │  │  └── Detik: 00
+  //             │  └───── Menit: 00
+  //             └──────── Jam: 17.00 WITA
+  //
+  // Jadi tanggal acara di bawah adalah:
+  // 1 Oktober 2026, pukul 17.00 WITA
+  // ============================================================
+  const weddingDate = new Date("2026-10-01T10:00:00+08:00");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -61,7 +86,7 @@ const DateCounter = () => {
               Menuju Hari Bahagia
             </Typography>
             <Typography className="italic text-primary text-center tracking-wide mt-0! mb-8">
-              Rabu, 25 Maret 2026 &nbsp;·&nbsp; 17.00 WITA
+              Rabu, 1 Oktober 2026 &nbsp;·&nbsp; 17.00 WITA
             </Typography>
           </div>
 

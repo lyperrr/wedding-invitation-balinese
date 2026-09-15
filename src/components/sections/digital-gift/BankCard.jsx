@@ -123,7 +123,16 @@ export default function BankCard({ bankName, accountDisplay, holderName }) {
           >
             Hadiah Digital
           </Typography>
-          <Chip />
+
+          <div className="flex gap-2 items-center">
+            <Typography
+              className="text-accent/60 uppercase tracking-widest"
+              style={{ fontSize: "16px" }}
+            >
+              {bankName}
+            </Typography>
+            <Chip />
+          </div>
         </div>
 
         {/* Card number */}
@@ -145,28 +154,18 @@ export default function BankCard({ bankName, accountDisplay, holderName }) {
         <div className="flex justify-between items-end">
           <div>
             <Typography
-              className="text-accent/60 uppercase tracking-widest mb-1"
+              className="text-accent uppercase tracking-widest"
               style={{ fontSize: "8px" }}
             >
               Atas Nama
             </Typography>
             <Typography
-              className="text-secondary tracking-wider font-playfair"
+              className="text-secondary tracking-wider font-playfair m-0!"
               style={{ fontSize: "15px" }}
             >
               {holderName}
             </Typography>
           </div>
-
-          <div className="text-right">
-            <Typography
-              className="text-accent/60 uppercase tracking-widest mb-1"
-              style={{ fontSize: "8px" }}
-            >
-              {bankName}
-            </Typography>
-          </div>
-
           <NetworkLogo />
         </div>
       </div>

@@ -14,14 +14,14 @@ import {
 const WeddingDate = () => {
   const weddingData = {
     date: {
-      day: 25,
-      month: "Maret",
+      day: 1,
+      month: "Oktober",
       year: 2026,
     },
     event: {
       type: "Resepsi",
-      time: "17:00 - SELESAI",
-      location: "Br. Lebah, Desa Tista, Kerambitan, Tabanan",
+      time: "10:00 - SELESAI",
+      location: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
       mapLink: "https://maps.app.goo.gl/mBcok8Rcc3WxMAeJ7", // URL untuk petunjuk arah
     },
     messages: {

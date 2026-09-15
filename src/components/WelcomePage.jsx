@@ -8,13 +8,13 @@ import { FadeIn, SlideInUp, ScaleIn } from "@/lib/animations";
 import { useUrlParams } from "@/hooks/useUrlParams";
 
 const welcomeData = {
-  date: "25 Maret 2026",
+  date: "1 Oktober 2026",
   label: "Pawiwahan",
   bride: {
-    name: "Agus",
+    name: "Dwiyana",
   },
   groom: {
-    name: "Mang Ari",
+    name: "Yuningsih",
   },
   invitation: {
     greeting: "Kepada Yth. Bapak/Ibu/Saudara/i",
@@ -31,9 +31,8 @@ const WelcomePage = ({ isVisible, onOpenInvitation }) => {
   return (
     <>
       <div
-        className={`bg-cover bg-center bg-no-repeat h-screen bg-welcome-mobile md:bg-welcome-desktop fixed inset-0 z-50 transition-transform duration-1000 ease-in-out ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`bg-cover bg-center bg-no-repeat h-screen bg-welcome-mobile md:bg-welcome-desktop fixed inset-0 z-50 transition-transform duration-1000 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="flex flex-col items-center justify-center h-screen">
           <div className="text-center flex flex-col items-center justify-between h-90">

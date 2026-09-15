@@ -53,7 +53,7 @@ export default function RSVP() {
 
   return (
     <>
-      <section className="min-h-screen py-10 pb-0 relative">
+      <section id="rsvp" className="min-h-screen py-10 pb-0 relative scroll-mt-6">
         <div className="container max-w-lg space-y-10">
           {/* Header */}
           <ScrollReveal>

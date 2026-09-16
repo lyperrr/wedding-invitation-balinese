@@ -7,7 +7,7 @@ import { FadeIn } from "@/lib/animations";
 
 const LeftContent = ({ isMusicPlaying, onToggleMusic }) => {
   const Data = {
-    name: ["Dwiyana", "Yuningsih"],
+    name: ["Dek Open", "Yuni"],
     date: "1 Oktober 2026",
   };
   return (

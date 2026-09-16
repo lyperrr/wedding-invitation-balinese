@@ -11,10 +11,10 @@ const welcomeData = {
   date: "1 Oktober 2026",
   label: "Pawiwahan",
   bride: {
-    name: "Dwiyana",
+    name: "Dek Open",
   },
   groom: {
-    name: "Yuningsih",
+    name: "Yuni",
   },
   invitation: {
     greeting: "Kepada Yth. Bapak/Ibu/Saudara/i",

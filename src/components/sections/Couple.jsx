@@ -41,7 +41,7 @@ const Couple = () => {
     <>
       <section className="pt-10">
         <WaveShape3 rotate={true} />
-        <div className="container py-10 pb-16 bg-cover  bg-center">
+        <div className="container py-10 pb-16 bg-cover bg-wallpaper-potrait bg-center">
           <StaggerContainer staggerDelay={0.4}>
             <StaggerItem>
               <ScrollReveal>

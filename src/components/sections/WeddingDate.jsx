@@ -19,7 +19,7 @@ const WeddingDate = () => {
       year: 2026,
     },
     event: {
-      type: "Resepsi",
+      type: "ACARA MULAI",
       time: "10:00 - SELESAI",
       location: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
       mapLink: "https://maps.app.goo.gl/7ee2hiV1hVRv1oaV8", // URL untuk petunjuk arah

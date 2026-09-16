@@ -22,8 +22,8 @@ const Couple = () => {
   const CoupleData = [
     {
       photo: photoGroom,
-      call_name: "Dwiyana",
-      long_name: "I Kadek Dwiyana Bakti",
+      call_name: "Dek Open",
+      long_name: "I Kadek Dek Open Bakti",
       from_child: 2,
       parent_name: "I Wayan Subakti dan ibu Ni Made Rai Mastini",
       address: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
@@ -31,7 +31,7 @@ const Couple = () => {
     {
       photo: photoBride,
       call_name: "Yuni",
-      long_name: "Luh Putu Yuningsih,S.H",
+      long_name: "Luh Putu Yuni,S.H",
       from_child: 1,
       parent_name: "I Komang Kariyana dan ibu Ni Ketut Parwati",
       address: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",

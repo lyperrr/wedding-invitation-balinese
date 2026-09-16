@@ -21,14 +21,14 @@ const DigitalGift = () => {
         bankName: "Bank BCA",
         accountNumber: "7730818828",
         accountDisplay: "7730 8188 28",
-        holderName: "I Kadek Dwiyana Bakti",
+        holderName: "I Kadek Dek Open Bakti",
       },
       {
         id: 2,
         bankName: "BPD BALI",
         accountNumber: "0220215841548",
         accountDisplay: "0220 1584 1548",
-        holderName: "Luh Putu Yuningsih, S.H",
+        holderName: "Luh Putu Yuni, S.H",
       },
     ],
   };

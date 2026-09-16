@@ -22,7 +22,7 @@ const WeddingDate = () => {
       type: "Resepsi",
       time: "10:00 - SELESAI",
       location: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
-      mapLink: "https://maps.app.goo.gl/mBcok8Rcc3WxMAeJ7", // URL untuk petunjuk arah
+      mapLink: "https://maps.app.goo.gl/TMEjLTmHCdKmFgqBA?g_st=iw", // URL untuk petunjuk arah
     },
     messages: {
       invitation:

@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/lib/animations";
 
 const Closing = () => {
   const Data = {
-    couple_name: "Dwiyana & Yuningsih",
+    couple_name: "Dek Open & Yuni",
     closing_message:
       "Kehadiran dan doa restu Anda merupakan kebahagiaan yang sangat berarti bagi kami. Terima kasih telah menjadi bagian dari hari istimewa kami.",
   };

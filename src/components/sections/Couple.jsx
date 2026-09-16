@@ -23,7 +23,7 @@ const Couple = () => {
     {
       photo: photoGroom,
       call_name: "Dek Open",
-      long_name: "I Kadek Dek Open Bakti",
+      long_name: "I Kadek Dwiyana Bakti",
       from_child: 2,
       parent_name: "I Wayan Subakti dan ibu Ni Made Rai Mastini",
       address: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
@@ -31,7 +31,7 @@ const Couple = () => {
     {
       photo: photoBride,
       call_name: "Yuni",
-      long_name: "Luh Putu Yuni,S.H",
+      long_name: "Luh Putu Yuningsih,S.H",
       from_child: 1,
       parent_name: "I Komang Kariyana dan ibu Ni Ketut Parwati",
       address: "Banjar dinas tumbu Kaler, Desa Tumbu, Karangasem",
@@ -41,7 +41,7 @@ const Couple = () => {
     <>
       <section className="pt-10">
         <WaveShape3 rotate={true} />
-        <div className="container py-10 pb-16 bg-cover bg-wallpaper-potrait bg-center">
+        <div className="container py-10 pb-16 bg-cover  bg-center">
           <StaggerContainer staggerDelay={0.4}>
             <StaggerItem>
               <ScrollReveal>

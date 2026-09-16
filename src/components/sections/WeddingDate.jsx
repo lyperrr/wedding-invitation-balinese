@@ -3,7 +3,7 @@ import Typography from "../ui/typography";
 import { Clock, MapPin, Map } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState, useEffect, useRef } from "react";
-import WaveShape3 from "../shapes/WaveShape3";
+import { Link } from "react-router-dom";
 import WaveShape4 from "../shapes/WaveShape4";
 import {
   StaggerContainer,
@@ -105,7 +105,7 @@ const WeddingDate = () => {
                         {weddingData.event.time}
                       </Typography>
                       <Typography className="inline-flex items-center gap-2 mt-0! text-sm! leading-4">
-                        <MapPin size={16} className="shrink-0"/>
+                        <MapPin size={16} className="shrink-0" />
                         {weddingData.event.location}
                       </Typography>
                       <Button
@@ -114,10 +114,10 @@ const WeddingDate = () => {
                         size="sm"
                         className="text-secondary mx-auto flex mt-2"
                       >
-                        <a href={weddingData.event.mapLink}>
+                        <Link to={weddingData.event.mapLink} target="_blank" rel="noopener noreferrer">
                           <Map size={16} />
                           Petunjuk Arah
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                   </div>

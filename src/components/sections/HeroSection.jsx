@@ -17,7 +17,7 @@ const HeroSection = () => {
   const Data = {
     title: "The Wedding of",
     name: "Dek Open & Yuni",
-    date: "Rabu, 1 Oktober 2026",
+    date: "Kamis, 1 Oktober 2026",
   };
 
   useEffect(() => {

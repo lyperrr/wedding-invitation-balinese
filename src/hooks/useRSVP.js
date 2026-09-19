@@ -12,6 +12,25 @@ import { useUrlParams } from "./useUrlParams";
 
 const ITEMS_PER_PAGE = 5;
 
+// Helper untuk mengecek apakah nama pengirim adalah ArtDevata
+export const isPinnedName = (name) => {
+  if (!name) return false;
+  const clean = name.trim().toLowerCase().replace(/[\s._-]/g, "");
+  return clean === "artdevata";
+};
+
+// Helper untuk menyortir data agar pesan yang di-pin selalu di urutan paling atas
+export const sortSubmissionsWithPinned = (items) => {
+  if (!Array.isArray(items)) return [];
+  return [...items].sort((a, b) => {
+    const aPinned = isPinnedName(a.name);
+    const bPinned = isPinnedName(b.name);
+    if (aPinned && !bPinned) return -1;
+    if (!aPinned && bPinned) return 1;
+    return 0;
+  });
+};
+
 export const useRSVP = () => {
   const { guestName } = useUrlParams();
 
@@ -59,10 +78,11 @@ export const useRSVP = () => {
 
       if (spreadsheetData !== null) {
         console.log("✅ Fetch successful! Data count:", spreadsheetData.length);
-        setSubmissions(spreadsheetData);
+        const sorted = sortSubmissionsWithPinned(spreadsheetData);
+        setSubmissions(sorted);
 
-        if (spreadsheetData.length > 0) {
-          saveSubmissions(spreadsheetData);
+        if (sorted.length > 0) {
+          saveSubmissions(sorted);
           console.log("💾 Saved to localStorage");
         } else {
           console.log("📭 Spreadsheet is empty");
@@ -72,13 +92,13 @@ export const useRSVP = () => {
         console.warn("⚠️ Fetch failed! Using localStorage as fallback");
         const localData = loadSubmissions();
         console.log("📦 Loaded from localStorage:", localData.length);
-        setSubmissions(localData);
+        setSubmissions(sortSubmissionsWithPinned(localData));
       }
     } catch (error) {
       console.error("❌ Error in refreshData:", error);
       const localData = loadSubmissions();
       console.log("📦 Emergency fallback to localStorage:", localData.length);
-      setSubmissions(localData);
+      setSubmissions(sortSubmissionsWithPinned(localData));
     } finally {
       setIsLoading(false);
       setLastUpdate(new Date());
@@ -109,15 +129,17 @@ export const useRSVP = () => {
       const success = await submitRSVP(form);
 
       if (success) {
-        // Add to local state immediately for better UX
-        setSubmissions((prev) => [
-          {
-            id: Date.now(),
-            ...form,
-            timestamp: new Date().toLocaleString("id-ID"),
-          },
-          ...prev,
-        ]);
+        // Add to local state immediately for better UX with pin sorting
+        setSubmissions((prev) =>
+          sortSubmissionsWithPinned([
+            {
+              id: Date.now(),
+              ...form,
+              timestamp: new Date().toLocaleString("id-ID"),
+            },
+            ...prev,
+          ]),
+        );
 
         // Reset form tapi pertahankan nama dari URL
         setForm({

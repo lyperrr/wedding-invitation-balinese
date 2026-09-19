@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Typography from "@/components/ui/typography";
 import { SlideInUp } from "@/lib/animations";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, Pin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { isPinnedName } from "@/hooks/useRSVP";
 
 export default function MessageCard({ submission, index }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const isHadir = submission.attendance === "hadir";
+  const isPinned = isPinnedName(submission.name);
   const needsExpansion = submission.message && submission.message.length > 150;
 
   // Format jumlah tamu: hapus underscore dan ganti dengan spasi
@@ -20,18 +22,39 @@ export default function MessageCard({ submission, index }) {
 
   return (
     <SlideInUp delay={index * 0.05} duration={0.35}>
-      <div className="rounded-md border bg-card p-4 space-y-2">
+      <div
+        className={[
+          "rounded-md border p-4 space-y-2 transition-all",
+          isPinned
+            ? "bg-accent/5 border-accent/40 shadow-sm ring-1 ring-accent/25"
+            : "bg-card border-border",
+        ].join(" ")}
+      >
         <div className="space-y-0.5 min-w-0">
-          <Typography
-            variant="p"
-            className="text-sm font-semibold text-foreground truncate mt-0"
-          >
-            {submission.name}
-          </Typography>
-          <div className="flex items-center justify-between">
-            <Typography variant="muted" className="text-xs my-0!">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-1.5 min-w-0">
+              <Typography
+                variant="p"
+                className="text-sm font-semibold text-foreground truncate mt-0"
+              >
+                {submission.name}
+              </Typography>
+              {isPinned && (
+                <Badge
+                  variant="outline"
+                  className="shrink-0 flex items-center gap-1 text-[10px] font-semibold bg-accent/15 border-accent text-accent px-1.5 py-0 rounded my-0!"
+                >
+                  <Pin className="h-2.5 w-2.5 fill-accent rotate-45" />
+                  Disematkan
+                </Badge>
+              )}
+            </div>
+            <Typography variant="muted" className="text-xs my-0! shrink-0">
               {submission.timestamp}
             </Typography>
+          </div>
+
+          <div className="flex items-center justify-end pt-1">
             <Badge
               variant="outline"
               className={[
